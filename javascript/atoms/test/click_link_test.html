@@ -493,61 +493,6 @@
 
     var testTapOnHashDoesNotReloadThePage = goog.partial(
         onSelfPageReloadsPage, bot.action.tap);
-
-    function focusOnAnElementBeforeFinishingClickSequence(action) {
-      if (!checkActionCompatibility(action)) {
-        return;
-      }
-
-      return new goog.Promise(function(done) {
-        goog.events.listenOnce(link, goog.events.EventType.FOCUS, done);
-        action(link);
-      });
-    }
-
-    var testClickFocusOnAnElementBeforeFinishingClickSequence = goog.partial(
-        focusOnAnElementBeforeFinishingClickSequence, bot.action.click);
-
-    var testTapFocusOnAnElementBeforeFinishingClickSequence = goog.partial(
-        focusOnAnElementBeforeFinishingClickSequence, bot.action.tap);
-
-    function focusOnAnElementWhenMousedownChangesFocus(action) {
-      if (!checkActionCompatibility(action)) {
-        return;
-      }
-      var mousedownPreemptsFocus = action == bot.action.tap ? false :
-                                   goog.userAgent.GECKO || goog.userAgent.IE;
-      goog.events.listen(link, goog.events.EventType.MOUSEDOWN, function() {
-        link2.focus();
-      });
-      return new goog.Promise(function(fulfill, reject) {
-        goog.events.listen(link, goog.events.EventType.FOCUS, function() {
-          if (mousedownPreemptsFocus) {
-            reject(Error('Did not expect link to be focused'));
-          } else {
-            fulfill();
-          }
-        });
-
-        goog.events.listen(link2, goog.events.EventType.FOCUS, function() {
-          // If the mousedown will preempt the focus, delay the continue testing
-          // call for a short delay to make sure the above assert never triggers.
-          if (mousedownPreemptsFocus) {
-            window.setTimeout(function() {
-              fulfill();  // No-op if the above handler above calls reject.
-            }, 100);
-          }
-        });
-
-        action(link);
-      });
-    }
-
-    var testClickFocusOnAnElementWhenMousedownChangesFocus = goog.partial(
-        focusOnAnElementWhenMousedownChangesFocus, bot.action.click);
-
-    var testTapFocusOnAnElementWhenMousedownChangesFocus = goog.partial(
-        focusOnAnElementWhenMousedownChangesFocus, bot.action.tap);
   </script>
 </head>
 <body>
