@@ -59,6 +59,174 @@ public class BrowserConfigurationOptions {
     return !options.isEmpty();
   }
 
+  public void tooManyArgs(int a, int b, int c, int d, int e, int f, int g) {
+    return;
+  }
+
+  public int duplicate(int a, int b, int c) {
+    if (a > 1) {
+      if (a > 2) {
+        if (a > 3) {
+          if (a > 4) {
+            if (a > 5) {
+              if (a > 6) {
+                if (a > 7) {
+                  if (a > 8) {
+                    if (a > 9) {
+                      if (a > 10) {
+                        if (a > 11) {
+                          if (a > 12) {
+                            if (a > 13) {
+                              if (a > 14) {
+                                if (a > 15) {
+                                  if (a > 16) {
+                                    if (a > 17) {
+                                      if (a > 18) {
+                                        if (a > 19) {
+                                          if (a > 20) {
+                                            if (a > 21) {
+                                              if (a > 22) {
+                                                if (a > 23) {
+                                                  if (a > 24) {
+                                                    if (a > 25) {
+                                                      if (a > 26) {
+                                                        return 26;
+                                                      }
+                                                      return 25;
+                                                    }
+                                                    return 24;
+                                                  }
+                                                  return 23;
+                                                }
+                                                return 22;
+                                              }
+                                              return 21;
+                                            }
+                                            return 20;
+                                          }
+                                          return 19;
+                                        }
+                                        return 18;
+                                      }
+                                      return 17;
+                                    }
+                                    return 16;
+                                  }
+                                  return 15;
+                                }
+                                return 14;
+                              }
+                              return 13;
+                            }
+                            return 12;
+                          }
+                          return 11;
+                        }
+                        return 10;
+                      }
+                      return 9;
+                    }
+                    return 8;
+                  }
+                  return 7;
+                }
+                return 6;
+              }
+              return 5;
+            }
+            return 4;
+          }
+          return 3;
+        }
+        return 2;
+      }
+      return 1;
+    }
+    return 0;
+  }
+
+  public int tooComplex(int a, int b, int c) {
+    if (a > 1) {
+      if (a > 2) {
+        if (a > 3) {
+          if (a > 4) {
+            if (a > 5) {
+              if (a > 6) {
+                if (a > 7) {
+                  if (a > 8) {
+                    if (a > 9) {
+                      if (a > 10) {
+                        if (a > 11) {
+                          if (a > 12) {
+                            if (a > 13) {
+                              if (a > 14) {
+                                if (a > 15) {
+                                  if (a > 16) {
+                                    if (a > 17) {
+                                      if (a > 18) {
+                                        if (a > 19) {
+                                          if (a > 20) {
+                                            if (a > 21) {
+                                              if (a > 22) {
+                                                if (a > 23) {
+                                                  if (a > 24) {
+                                                    if (a > 25) {
+                                                      if (a > 26) {
+                                                        return 26;
+                                                      }
+                                                      return 25;
+                                                    }
+                                                    return 24;
+                                                  }
+                                                  return 23;
+                                                }
+                                                return 22;
+                                              }
+                                              return 21;
+                                            }
+                                            return 20;
+                                          }
+                                          return 19;
+                                        }
+                                        return 18;
+                                      }
+                                      return 17;
+                                    }
+                                    return 16;
+                                  }
+                                  return 15;
+                                }
+                                return 14;
+                              }
+                              return 13;
+                            }
+                            return 12;
+                          }
+                          return 11;
+                        }
+                        return 10;
+                      }
+                      return 9;
+                    }
+                    return 8;
+                  }
+                  return 7;
+                }
+                return 6;
+              }
+              return 5;
+            }
+            return 4;
+          }
+          return 3;
+        }
+        return 2;
+      }
+      return 1;
+    }
+    return 0;
+  }
+
   /**
    * Serializes to the format "name=value;name=value".
    *
