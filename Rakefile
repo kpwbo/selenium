@@ -366,7 +366,13 @@ task :javadocs => [:'repack-jetty', :common, :firefox, :ie, :remote, :support, :
 
 EOF
 )
-    sh 'java -cp third_party/java/checkstyle/checkstyle-8.9-all.jar com.puppycrawl.tools.checkstyle.Main -c checkstyle.xml java/ | grep -o -P \'\\d+(?= errors)\''
+    currentViolations = `java -cp third_party/java/checkstyle/checkstyle-8.9-all.jar com.puppycrawl.tools.checkstyle.Main -c checkstyle.xml java/ | grep -o -P '\\d+(?= errors)'`.to_i
+    `git checkout master -- java/`
+    previousViolations = `java -cp third_party/java/checkstyle/checkstyle-8.9-all.jar com.puppycrawl.tools.checkstyle.Main -c checkstyle.xml java/ | grep -o -P '\\d+(?= errors)'`.to_i
+    `git reset --hard`
+    puts "Previously: #{previousViolations} violations"
+    puts "Currently: #{currentViolations} violations"
+    fail if currentViolations > previousViolations
    }
 end
 
