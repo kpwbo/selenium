@@ -366,6 +366,7 @@ task :javadocs => [:'repack-jetty', :common, :firefox, :ie, :remote, :support, :
 
 EOF
 )
+    sh 'java -cp third_party/java/checkstyle/checkstyle-8.9-all.jar com.puppycrawl.tools.checkstyle.Main -c checkstyle.xml java/ | grep -o -P \'\\d+(?= errors)\''
    }
 end
 

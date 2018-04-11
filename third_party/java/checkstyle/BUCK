@@ -1,0 +1,5 @@
+prebuilt_jar(
+  name = 'checkstyle',
+  binary_jar = 'checkstyle-8.9-all.jar',
+  source_jar = 'checkstyle-8.9-sources.jar',
+)
