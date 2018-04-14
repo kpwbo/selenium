@@ -153,7 +153,7 @@ any). Follow these guidelines when writing one:
 2. Keep the second line blank.
 3. Wrap all other lines at 72 columns.
 4. Include `Fixes #N`, where _N_ is the issue number the commit
-    fixes, if any.
+    fixes.
 
 A good commit message can look like this:
 
@@ -171,6 +171,8 @@ nicely even when it is indented.
 
 Fixes #141
 ```
+
+Commits must respect the guidelines in order to be accepted.
 
 The first line must be meaningful as it's what people see when they
 run `git shortlog` or `git log --oneline`.
@@ -234,6 +236,9 @@ From your create your issue or pull request, through code review and
 towards integration, it will be assigned different Github labels. The
 labels serve for the committers to more easily keep track of work
 that's pending or awaiting action.
+
+Priority labels are pink and carry the **P** prefix. The highlight which
+issues and pull request are more important and require attention.
 
 Component labels are yellow and carry the **C** prefix. They highlight
 the subsystem or component your PR makes changes in.
