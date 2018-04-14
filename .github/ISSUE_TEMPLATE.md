@@ -1,5 +1,5 @@
 ## Guidelines Checklist - <!-- Refer to CONTRIBUTING.md for details -->
-- [ ] Is the issue is concise and reproducible? <!-- http://sscce.org/ -->
+- [ ] Is the issue concise and reproducible? <!-- http://sscce.org/ -->
 - [ ] The issue isn't about support or non-technical topics. <!-- Question and support should be directed to the mailing list -->
 - [ ] Is there enough details to properly triage this issue? <!-- Include enough details about the module affected and the behavior of the issue -->
 

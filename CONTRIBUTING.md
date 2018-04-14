@@ -200,7 +200,7 @@ Before you submit your pull request make sure you pass all the tests:
 ```
 
 Make sure that all tests are passing before submitting your pull
-request. Pull request are required to pass all tests.
+request. Pull requests are required to pass all tests.
 
 ### Step 6: Sign the CLA
 
@@ -245,8 +245,8 @@ towards integration, it will be assigned different Github labels. The
 labels serve for the committers to more easily keep track of work
 that's pending or awaiting action.
 
-Priority labels are pink and carry the **P** prefix. The highlight which
-issues and pull request are more important and require attention.
+Priority labels are pink and carry the **P** prefix. This highlights which
+issues and pull requests are more important and require attention.
 
 Component labels are yellow and carry the **C** prefix. They highlight
 the subsystem or component your PR makes changes in.
