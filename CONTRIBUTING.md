@@ -14,6 +14,8 @@ the defect. If the issue can't be reproduced it will be closed.
 Please provide [concise reproducible test cases](http://sscce.org/)
 and describe what results you are seeing and what results you expect.
 
+Fill in the checklist to show that your issue respects the guidelines.
+
 Issues shouldn't be used for support. Please address questions to the
 [`selenium-users@` mailing list](https://groups.google.com/forum/#!forum/selenium-users).
 Discussion of high level project ideas or non-technical topics should
@@ -197,6 +199,9 @@ Before you submit your pull request make sure you pass all the tests:
 % ./go clean test
 ```
 
+Make sure that all tests are passing before submitting your pull
+request. Pull request are required to pass all tests.
+
 ### Step 6: Sign the CLA
 
 Before we can accept, we first ask people to sign a
@@ -215,8 +220,11 @@ it.
 ```
 
 Go to https://github.com/yourusername/selenium.git and press the _Pull
-Request_ and fill out the form. **Please indicate that you've signed
-the CLA** (see Step 6).
+Request_ and fill out the form. The checklist ensures that you've
+followed all the procedures properly before submitting.
+**Please indicate that you've signed the CLA** (see Step 6).
+
+
 
 Pull requests are usually reviewed within a few days. If there are
 comments to address, apply your changes in new commits (preferably
