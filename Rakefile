@@ -366,6 +366,13 @@ task :javadocs => [:'repack-jetty', :common, :firefox, :ie, :remote, :support, :
 
 EOF
 )
+    currentViolations = `java -cp third_party/java/checkstyle/checkstyle-8.9-all.jar com.puppycrawl.tools.checkstyle.Main -c checkstyle.xml java/ | grep -o -P '\\d+(?= errors)'`.to_i
+    `git clone --depth=1 --branch=master https://github.com/6112/selenium.git ../selenium-master`
+    previousViolations = `java -cp third_party/java/checkstyle/checkstyle-8.9-all.jar com.puppycrawl.tools.checkstyle.Main -c checkstyle.xml ../selenium-master/java/ | grep -o -P '\\d+(?= errors)'`.to_i
+    `rm -rf ../selenium-master`
+    puts "Previously: #{previousViolations} violations"
+    puts "Currently: #{currentViolations} violations"
+    fail if currentViolations > previousViolations
    }
 end
 
