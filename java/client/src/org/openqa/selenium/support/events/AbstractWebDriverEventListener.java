@@ -107,6 +107,24 @@ public abstract class AbstractWebDriverEventListener implements WebDriverEventLi
     // Do nothing
   }
 
+  /**
+   * Method called directly after the window is switched.
+   * @param windowName Name of the window switched to.
+   * @param driver WebDriver used.
+   */
+  public void afterSwitchToWindow(String windowName, WebDriver driver) {
+      // Do nothing
+  }
+
+  /**
+   * Method called directly before the window is switched.
+   * @param windowName Name of the window to switch to.
+   * @param driver WebDriver used.
+   */
+  public void beforeSwitchToWindow(String windowName, WebDriver driver) {
+      // Do nothing
+  }
+
   public void onException(Throwable throwable, WebDriver driver) {
     // Do nothing
   }
