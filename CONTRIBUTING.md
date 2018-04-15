@@ -14,6 +14,8 @@ the defect. If the issue can't be reproduced it will be closed.
 Please provide [concise reproducible test cases](http://sscce.org/)
 and describe what results you are seeing and what results you expect.
 
+Fill in the checklist to show that your issue respects the guidelines.
+
 Issues shouldn't be used for support. Please address questions to the
 [`selenium-users@` mailing list](https://groups.google.com/forum/#!forum/selenium-users).
 Discussion of high level project ideas or non-technical topics should
@@ -153,7 +155,7 @@ any). Follow these guidelines when writing one:
 2. Keep the second line blank.
 3. Wrap all other lines at 72 columns.
 4. Include `Fixes #N`, where _N_ is the issue number the commit
-    fixes, if any.
+    fixes.
 
 A good commit message can look like this:
 
@@ -171,6 +173,8 @@ nicely even when it is indented.
 
 Fixes #141
 ```
+
+Commits must respect the guidelines in order to be accepted.
 
 The first line must be meaningful as it's what people see when they
 run `git shortlog` or `git log --oneline`.
@@ -195,6 +199,9 @@ Before you submit your pull request make sure you pass all the tests:
 % ./go clean test
 ```
 
+Make sure that all tests are passing before submitting your pull
+request. Pull requests are required to pass all tests.
+
 ### Step 6: Sign the CLA
 
 Before we can accept, we first ask people to sign a
@@ -213,8 +220,11 @@ it.
 ```
 
 Go to https://github.com/yourusername/selenium.git and press the _Pull
-Request_ and fill out the form. **Please indicate that you've signed
-the CLA** (see Step 6).
+Request_ and fill out the form. The checklist ensures that you've
+followed all the procedures properly before submitting.
+**Please indicate that you've signed the CLA** (see Step 6).
+
+
 
 Pull requests are usually reviewed within a few days. If there are
 comments to address, apply your changes in new commits (preferably
@@ -234,6 +244,9 @@ From your create your issue or pull request, through code review and
 towards integration, it will be assigned different Github labels. The
 labels serve for the committers to more easily keep track of work
 that's pending or awaiting action.
+
+Priority labels are pink and carry the **P** prefix. This highlights which
+issues and pull requests are more important and require attention.
 
 Component labels are yellow and carry the **C** prefix. They highlight
 the subsystem or component your PR makes changes in.
